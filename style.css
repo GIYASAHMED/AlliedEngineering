@@ -1,99 +1,209 @@
-@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
 /* font-family: "Merienda", cursive; */
-:root{
-    --primary-color:#ff5e15;
-    
+:root {
+  --primary-color: #ff5e15;
 }
-.navbar-brand{
-    font-family: "Playfair Display", serif;
-    font-weight: 600;
-    font-size: 40px;
-    color: var(--primary-color);
+.navbar-brand {
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+  font-size: 40px;
+  color: var(--primary-color);
 }
-.nav-link{
-    font-size: 20px;
-    font-family: "Playfair Display", serif;
-    color: black;
-    margin-right: 20px;
+.nav-link {
+  font-size: 20px;
+  font-family: "Playfair Display", serif;
+  color: black;
+  margin-right: 20px;
 }
-.nav-link:hover{
-    color: var(--primary-color);
+.nav-link:hover {
+  color: var(--primary-color);
 }
 .navbar-collapse {
-    max-height: 80vh;
-    overflow-y: auto;
-  }
-.navbar-toggler{
-    background-color: var(--primary-color);
+  max-height: 80vh;
+  overflow-y: auto;
 }
-.navbar-toggler-icon{
-    font-size: 20px;
+.navbar-toggler {
+  background-color: var(--primary-color);
 }
-.navBtn{
-    padding: 10px 15px;
-    outline: none;
-    border:none;
+.navbar-toggler-icon {
+  font-size: 20px;
+}
+.navBtn {
+  padding: 10px 15px;
+  outline: none;
+  border: none;
 
-    background-color: var(--primary-color);
-    color: white;
-    font-weight: bold;
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: bold;
 }
 /* Navbar End */
 /* Swiper start */
-#main{
-    width: 100%;
-    height: 90vh;
+#main {
+  width: 100%;
+  height: 90vh;
 }
 .swiper {
-      width: 100%;
-      height: 100%;
-    }
+  width: 100%;
+  height: 100%;
+}
 
 .swiper-slide {
-    background-position: center;
-    background-size: cover;
-    position: relative;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  position: relative;
 }
 
 .swiper-slide img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
-.swiperOverlay{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: black;
-    opacity: 0.5;    
+.swiperOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.473);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.swiperOverlayContent{
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
+.swiperOverlayContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 900px;
+  height: fit-content;
+  /* background-color: red; */
+  z-index: 999;
 }
 
-.swiperOverlayContent h1{
-    text-align: center;
-    text-transform: capitalize;
-    font-family: "Playfair Display", serif;
-    font-weight: 600;
+.swiperOverlayContent h1 {
+  text-align: center;
+  text-transform: capitalize;
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+  font-size: 80px;
+  color: white;
+}
+.swiperOverlayContent h4 {
+  text-transform: uppercase;
+  color: var(--primary-color);
+}
+.swiperOverlayContent p {
+  color: white;
+  font-size: 22px;
+  text-align: center;
+}
+
+@media (max-width: 575px) {
+  .swiperOverlayContent {
+    padding: 0 8px;
+  }
+  .swiperOverlayContent h1 {
+    font-size: 38px;
+  }
+
+  .swiperOverlayContent p {
+    font-size: 16px;
+   
+  }
+}
+
+@media (min-width: 576px) {
+  .swiperOverlayContent {
+    padding: 0 8px;
+  }
+  .swiperOverlayContent h1 {
+    font-size: 70px;
+  }
+
+  .swiperOverlayContent p {
+    font-size: 20px;
+   
+  }
+}
+@media (min-width: 992px) {
+  .swiperOverlayContent {
+    padding: 0 8px;
+  }
+  .swiperOverlayContent h1 {
     font-size: 80px;
+  }
+
+  .swiperOverlayContent p {
+    font-size: 22px;
+   
+  }
+}
+.buttons{
+    display: flex;
+    gap: 10px;
+}
+.heroBtn{
+    border: none;
+    width: 150px;
+    padding: 10px 0;
+    font-weight: bold;
+    transition: all 0.5s;
+    background-color: black;
     color: white;
 }
-.swiperOverlayContent h4{
+.heroBtn:nth-child(2){
+    background-color: var(--primary-color);
+}
+.heroBtn:nth-child(2):hover{
+    background-color: white;
+    transition: all 0.5s;
+    color: var(--primary-color);
+}
+/* Hero Section Complete */
+.aboutSection{
+    padding: 100px 0 50px 0;
+    width: 100%;
+    height: 100vh;
+}
+.aboutImage{
+    width: 90%;
+    height: 500px;
+    border-top: 7px solid var(--primary-color);
+    border-left: 7px solid var(--primary-color);
+}
+.aboutImage img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.aboutContent h4{
     text-transform: uppercase;
     color: var(--primary-color);
 }
-.swiperOverlayContent p{
-    color: white;
-    font-size: 22px;
-    width: 700px;
-    text-align: center;
+.aboutContent h2 {
+  text-transform: capitalize;
+  font-family: "Playfair Display", serif;
+  font-weight: 800;
+  font-size: 50px;
+  color: #001248;
+}
+.aboutContent p{
+    font-size: 20px;
+}
+.qualityImg{
+    width: 150px;
+    height: 150px;
+}
+.qualityImg img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.engSvg img{
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
 }
